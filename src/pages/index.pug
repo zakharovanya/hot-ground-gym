@@ -1,0 +1,16 @@
+extends ../pug/layout.pug
+
+include ../components/banner/banner.component.pug
+include ../components/company/company.component.pug
+include ../components/slider/slider.component.pug
+include ../components/popup/popup.component.pug
+
+block title
+  title index
+block page-content
+  +banner
+  +company
+  +slider
+  +popup
+  //#example-vue-module
+

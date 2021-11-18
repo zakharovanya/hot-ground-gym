@@ -1,0 +1,23 @@
+mixin slider(data)
+  +style('slider')
+
+  section.slider
+    .swiper.slider-wrapper
+      .swiper-wrapper.slider-list
+        
+        .swiper-slide.slider-item
+          +image('images/image4.jpg')
+          a.btn.slider-btn.open-popup(href='#open-popup') Play
+        .swiper-slide.slider-item
+          +image('images/image4.jpg')
+          a.btn.slider-btn.open-popup(href='#open-popup') Play
+        .swiper-slide.slider-item
+          +image('images/image4.jpg')
+          a.btn.slider-btn.open-popup(href='#open-popup') Play
+        .swiper-slide.slider-item
+          +image('images/image4.jpg')
+          a.btn.slider-btn.open-popup(href='#open-popup') Play
+
+      .swiper-button-next: p.swiper-button-text Next 
+      .swiper-button-prev: p.swiper-button-text Previous
+    

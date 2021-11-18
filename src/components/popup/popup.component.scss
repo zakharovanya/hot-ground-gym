@@ -1,0 +1,62 @@
+.popup {
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99999;
+}
+
+.popup-visible {
+  display: block;
+}
+
+.close-popup {
+  color: $gray-6;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  transition: all 0.6s;
+  box-sizing: content-box;
+  &:hover {
+    color: $orange;
+  }
+  @include phone {
+    top: 20px;
+    right: 15px;
+    line-height: 28px;
+  }
+}
+
+.popup-body {
+  border-top: 5px solid $orange;
+  background: url('images/bg-popup.svg'); 
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-color: white;
+  padding: 92px 72px 40px;
+  margin: 100px auto;
+  max-width: 874px;
+  position: relative;
+  @include phone {
+    padding: 20px 15px;
+  }
+}
+
+.popup-header {
+  font-family: $font-family-header;
+  font-size: 40px;
+  line-height: 52px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  @include phone {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}

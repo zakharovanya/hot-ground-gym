@@ -1,0 +1,15 @@
+mixin image(src, loader, klass)
+  -
+    let type = src.split('.');
+    type = type[type.length - 1];
+    if (!klass) klass = ''
+    if (!loader) loader = 'loader';
+  if type === 'svg'
+    img(src=``, data-src=src, alt='alt', class=klass)
+  else
+    picture
+      img(src=``, data-src=src, alt='alt', class=klass)
+
+mixin style(name)
+  if APP_MODE === 'production'
+    link(href=`${name}.css`, rel='stylesheet')

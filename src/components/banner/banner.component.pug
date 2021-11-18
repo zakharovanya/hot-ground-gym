@@ -1,0 +1,31 @@
+mixin banner(data)
+  +style('banner')
+  section.banner: div.container
+    div.banner-wrapper
+      div.banner-block
+
+        h2.banner-header Obstacle Courses / Kids Birthday Parties / Private Team Building Events in Arlington Heights, IL
+        p.banner-text Here at Hot Ground Gym® (HGG) we're revolutionizing the way kids stay active, learn, and grow. Our indoor obstacle courses and team-building challenges are designed to engage kids physically and mentally and to stimulate their character, in a super unique and fun environment.
+        a.btn.contacts-link(href='#') Contact us
+        a.btn.play-video-link.open-popup(href='#open-popup') Watch the video
+
+        .award 
+          .swiper
+            ul.swiper-wrapper.awards-list.list-reset
+              li.swiper-slide.awards-item: div.awards-logo
+                +image('images/google.svg')
+              li.swiper-slide.awards-item: div.awards-logo
+                +image('images/hulafrogs.png')
+              li.swiper-slide.awards-item: div.awards-logo
+                +image('images/yelp.svg')
+              li.swiper-slide.awards-item: div.awards-logo
+                +image('images/fb.svg')
+              li.swiper-slide.awards-item: div.awards-logo
+                +image('images/3pa.svg')
+              li.swiper-slide.awards-item: div.awards-logo
+                +image('images/5pc.svg')
+            .swiper-button-next.awards-button-next: span.icon-arrow-alt
+            .swiper-button-prev.awards-button-prev: span.icon-arrow-alt
+
+      div.banner-image
+        +image('images/banner.jpg')

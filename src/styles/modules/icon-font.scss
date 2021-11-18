@@ -1,0 +1,56 @@
+@font-face {
+    font-family: icon-font;
+    font-display: swap;
+    src: url("../../assets/fonts/icon-font.woff2?00bbbaf8") format("woff2"); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon"], [class*=" icon"] {
+    font-family: 'icon-font';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+}
+
+
+.icon-arrow-alt::before {
+    content: "\ea01";
+}
+
+.icon-burger-x::before {
+    content: "\ea02";
+}
+
+.icon-burger::before {
+    content: "\ea03";
+}
+
+.icon-close::before {
+    content: "\ea04";
+}
+
+.icon-facebook::before {
+    content: "\ea05";
+}
+
+.icon-heart::before {
+    content: "\ea06";
+}
+
+.icon-instagram::before {
+    content: "\ea07";
+}
+
+.icon-phone-1::before {
+    content: "\ea08";
+}
+
+.icon-phone::before {
+    content: "\ea09";
+}
+
+.icon-youtube::before {
+    content: "\ea0a";
+}
+

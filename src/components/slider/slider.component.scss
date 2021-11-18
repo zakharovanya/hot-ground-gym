@@ -1,0 +1,190 @@
+$btn-width: 478px;
+$btn-width-m: 198px;
+
+.slider {
+  padding-top: 110px;
+  padding-bottom: 230px;
+  background-color: $gray-5;
+  background-image: url('images/bg.svg');
+  background-position-x: right;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  @include phone {
+    padding-top: 40px;
+    padding-bottom: 94px;
+    padding-left: 15px;
+    background-image: url('images/bg-m.svg');
+  }
+}
+
+.slider-wrapper {
+  height: $btn-width;
+  position: relative;
+  @include phone {
+    height: $btn-width-m;
+  }
+
+  .swiper-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 34px;
+    height: 100%;
+    position: absolute;
+    top: 20px; 
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::after {
+      display: none;
+    }
+  }
+
+  .swiper-button-next {
+    background-color: $orange-1;
+    border-color: $orange-1;
+    right: 0;
+    left: auto;
+  }
+
+  .swiper-button-prev {
+    background-color: $green-1;
+    border-color: $green-1;
+    left: 0;
+    right: auto;
+  }
+
+  .swiper-button-text {
+    transform: rotate(270deg);
+    padding-top: 5px;
+    padding-bottom: 4px;
+    text-transform: uppercase;
+    font-family: $font-family-header;
+    color: white;
+    font-size: 16px;
+    line-height: 23px;
+    letter-spacing: 0.04em;
+  }
+
+  .swiper-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 34px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::after {
+      display: none;
+    }
+    @include phone {
+      display: none;
+    }
+  }
+
+  .swiper-button-next {
+    background-color: $orange-1;
+    border-color: $orange-1;
+    right: 0;
+    left: auto;
+  }
+
+  .swiper-button-prev {
+    background-color: $green-1;
+    border-color: $green-1;
+    left: 0;
+    right: auto;
+  }
+
+  .swiper-button-text {
+    transform: rotate(270deg);
+    padding-top: 5px;
+    padding-bottom: 4px;
+    text-transform: uppercase;
+    font-family: $font-family-header;
+    color: white;
+    font-size: 16px;
+    line-height: 23px;
+    letter-spacing: 0.04em;
+  }
+}
+
+.slider-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-item {
+  //width: auto !important;
+  @include phone {
+    height: auto;
+    //width: 100% !important;
+    max-width: 320px;
+  }
+  img {   
+    height: $btn-width;
+    object-fit: cover;
+    @include phone {
+      object-fit: contain;
+    }
+  }
+  &:hover {
+    .slider-btn {
+      opacity: 1;
+    }
+  }
+}
+
+.swiper-slide-active {
+  .slider-btn {
+    opacity: 1;
+  }
+}
+
+.slider-btn {
+  position: absolute;
+  padding: 9px 48px;
+  background-color: $orange;
+  color: white;
+  border-color: $orange;
+  opacity: 0;
+  transition: all .5s;
+  z-index: 20;
+}

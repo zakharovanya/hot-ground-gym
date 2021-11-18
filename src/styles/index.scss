@@ -1,0 +1,161 @@
+@import '~normalize.css/normalize.css';
+@import 'fonts';
+@import './modules/typography.scss';
+
+html {
+  box-sizing: border-box;
+  font-size: $font-size-base + 0px;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  color: $neutral-1;
+  font-weight: normal;
+  font-family: $font-family-base;
+}
+
+.root {
+  flex-grow: 1;
+  width: 100%;
+  @include phone {
+    margin-top: 104px;
+  }
+}
+
+.root-show-menu {
+  @include phone {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 2;
+      background-color: rgba(51, 60, 48, 0.8);
+    }
+  }
+}
+
+.root-hide-menu {
+  @include phone {
+    background-color: transparent;
+  }
+}
+
+.container {
+  width: $large-size + 30px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+input, select {
+  border-radius: 0;
+  box-shadow: none;
+  -webkit-appearance: none;
+}
+
+a,
+button {
+  outline: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn {
+  display: inline-block;
+  font-family: $font-family-header;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 23px;
+  border-radius: 0;
+  border-width: 1px;
+  border-style: solid;
+  @include phone {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+.btn + .btn {
+  margin-left: 14px;
+  @include phone {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link-reset {
+  text-decoration: none;
+}
+
+.columns-2 {
+  flex-basis: 50%;
+  @include phone {
+    flex-basis: 100%;
+  }
+}
+
+.hide_on_medium { 
+  @include medium { display: none; }
+}
+
+.show_on_medium { 
+  @include medium-mf { display: none; }
+}
+
+.hide_on_mobile { 
+  @include max-screen(380px) { display: none; }
+}
+
+.hide_on_small_mobile { 
+  @include max-screen(374px) { display: none; }
+}
+
+.show_on_mobile_only { 
+  @include min-screen(380px) { display: none; }
+}
+
+.show_on_small_mobile_only { 
+  @include min-screen(374px) { display: none; }
+}
+
+// animation
+
+@keyframes show {
+  0% {
+    transform: translateX(-300px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

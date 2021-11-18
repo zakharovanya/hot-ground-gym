@@ -1,0 +1,177 @@
+.banner {
+  position: relative;
+  background-image: url('images/bg-banner.svg');
+  background-repeat: no-repeat;
+  height: 677px;
+  @include phone {
+    background-image: url('images/bg-banner-m.svg');
+    background-position: right;
+    overflow: hidden;
+  }
+}
+
+.banner-block {
+  padding-top: 120px;
+  width: 100% / 3 * 2;
+  position: relative;
+  @include phone {
+    width: 100%;
+    padding-top: 45px;
+  }
+}  
+
+.banner-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  height: auto;
+  @include phone {
+    right: -40%;
+    height: 100%;
+  }
+  img {
+    @include phone {
+      position: absolute;
+      top: auto;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+      height: 85%;
+      width: auto;
+      max-width: initial;
+    }
+  }
+}
+
+.banner-header,
+.banner-text {
+  color: white;
+}
+
+.banner-header {
+  font-family: $font-family-header;
+  font-size: 36px;
+  line-height: 52px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  @include phone {
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 10px;
+  }
+}
+
+.banner-text {
+  font-size: 16px;
+  line-height: 26px;
+  max-width: 70%;
+  margin-bottom: 40px;
+  @include phone {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    max-width: 77%;
+    margin-bottom: 16px;
+  }
+}
+.contacts-link,
+.play-video-link {
+  @include phone {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.contacts-link {
+  font-family: $font-family-header;
+  color: white;
+  background-color: $orange;
+  padding-left: 56px;
+  padding-right: 56px;
+  border-color: $orange;
+  &:hover {
+    background-color: $orange-hover;
+    border-color: $orange-hover;
+  }
+  &:focus {
+    border-color: $gray-4;
+  }
+}
+
+.play-video-link {
+  font-family: $font-family-header;
+  color: white;
+  background-color: transparent;
+  border-color: white;
+  padding-left: 32px;
+  padding-right: 65px;
+  background-image: url('images/arrow.svg');
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 85%;
+  &:hover {
+    background-color: $orange-hover;
+    border-color: $orange-hover;
+  }
+  &:focus {
+    border-color: $orange;
+  }
+}
+
+.award {
+  max-width: 625px;
+  margin-bottom: 26px;
+  .swiper-button-disabled {
+    opacity: .8;
+  }
+  .swiper-button-lock {
+    display: none;
+  }
+}
+
+.awards-list {
+  margin-top: 46px;
+  margin-bottom: 35px;
+  display: flex;
+}
+
+.awards-item {
+  @include phone {
+    width: auto !important;
+  }
+}
+
+.awards-logo {
+  img {
+    height: 91px;
+    width: 91px;
+    object-fit: contain;
+    @include phone {
+      width: auto;
+      height: 69px;
+    }
+  }
+}
+
+.awards-button-next,
+.awards-button-prev {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 21px;
+}
+
+.awards-button-next {
+  right: 42%;
+  left: auto;
+}
+
+.awards-button-prev {
+  right: auto;
+  left: 42%;
+  transform: rotate(180deg);
+}

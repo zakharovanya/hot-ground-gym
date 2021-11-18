@@ -1,0 +1,236 @@
+.header {
+  font-family: $font-family-header;
+  background-color: white;
+  z-index: 5;
+}
+
+.m-t-104-mobile {
+  @include phone {
+    top: 104px !important;
+  }
+}
+
+.fixed-header {
+  @include phone {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  .menu-list {
+    @include phone {
+      top: 59px;
+    }
+  }
+}
+
+.address-section {
+  background-color: $gray-1;
+}
+
+.address-list {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  @include phone {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+}
+
+.mobile-address-list {
+  margin-top: 40px;
+  border-top: 1px solid rgba(41, 41, 41, 0.1);
+
+  .address-list {
+    flex-direction: column;
+    padding: 0 0;
+  }
+
+  .address-item {
+    margin-top: 10px;
+  }
+}
+
+.mobile-address-hide {
+  @include phone {
+    display: none;
+  }
+}
+
+.mobile-address-show {
+  @include phone {
+    display: block;
+  }
+}
+
+.address-item {
+  padding-left: 22px;
+  margin-left: 35px;
+  font-family: $font-family-text;
+  font-size: $font-size-base + 0px;
+  line-height: $line-heaight-base;
+  color: $gray-2;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include phone {
+    margin-left: 0;
+  }
+}
+
+.address-item__location {
+  background-image: url('images/location-marker.svg');
+}
+
+.address-item__phone {
+  background-image: url('images/phone.svg');
+}
+
+.address-item__time {
+  background-image: url('images/clock.svg');
+}
+
+.menu-wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  max-height: 76px;
+  @include phone { 
+    height: 59px;
+    align-items: center;
+  } 
+  .contacts-link {
+    @include phone { 
+      width: auto;
+      padding: 10px 28px;
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}
+
+.menu-list {
+  display: flex;
+  @include phone {
+    flex-wrap: wrap;
+    width: 85%;
+    //display: none;
+    position: fixed;
+    top: 104px;
+    left: 0;
+    flex-direction: column;
+    background-color: $gray-1;
+    padding: 74px 16px 16px;
+    height: 100%;
+    z-index: 2 !important;
+  }
+}
+
+.mobile-menu-show {
+  @include phone {
+    z-index: 1;
+    animation: show 0.6s;
+  }
+}
+
+.mobile-menu-hide {
+  @include phone {
+    transform: translateX(-320px);
+    z-index: -2;
+    transition: 0.6s;
+  }
+}
+
+.menu-item {
+  &:not(:last-child) {
+    margin-right: 32px;
+  }
+  padding-top: 28px;
+  padding-bottom: 28px;
+  @include phone {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+.menu-link {
+  font-family: $font-family-text;
+  font-weight: 600;
+  font-size: $font-size-base + 0px;
+  line-height: 19px;
+  color: $gray-3;
+}
+
+.logotype-link {
+  margin-top: 6px;
+}
+
+.logotype-image {
+  position: relative;
+  z-index: 10;
+  @include phone {
+    margin-right: 30px;
+  }
+  img {
+    object-fit: contain;
+    @include phone {
+      margin-top: 30px;
+      height: 70px;
+    }
+  }
+}
+
+.burger-button {
+  background-color: transparent;
+  border-color: transparent;
+  .icon-burger {
+    font-size: 19px;
+  }
+}
+
+.burger-button-open {
+  .icon-burger {
+    &::before {
+      content: '\ea02';
+    }
+  }
+}
+
+.phone-button {
+  text-decoration: none;
+  font-size: 21px;
+  color: $gray-2;
+  margin-left: 23px;
+}
+
+.social-list {
+  display: flex;
+  margin-top: 4px;
+}
+
+.social-item + .social-item {
+  margin-left: 25px;
+}
+
+.social-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.social-icon__facebook {
+  background-image: url('images/facebook.svg');
+}
+
+.social-icon__youtube {
+  background-image: url('images/youtube.svg');
+}
+
+.social-icon__instagram {
+  background-image: url('images/instagram.svg');
+}

@@ -1,0 +1,147 @@
+p {
+  margin: 0 0 1rem;
+  font-size: $font-size-base + 0px;
+  line-height: 1.7;
+
+  a {
+    color: var(--primary-1);
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.text-small {
+  font-size: $font-size-base - 2px;
+}
+
+.text-medium {
+  font-size: $font-size-base + 2px;
+  @include tablet {
+    font-size: $font-size-base + 0px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.heading-jumbo,
+.heading-1,
+.heading-2,
+.heading-3,
+.heading-4 {
+  margin: 0 0 1rem;
+  color: inherit;
+  font-family: $font-family-solid;
+  line-height: 1.1;
+  a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: 0.2s;
+    &:hover {
+      border-bottom-color: currentColor;
+    }
+  }
+  @include tablet {
+    line-height: 1.2;
+  }
+}
+
+.heading-jumbo {
+  font-size: 70px;
+}
+
+h1,
+.heading-1 {
+  font-size: 40px;
+}
+
+h2,
+.heading-2 {
+  font-size: 28px;
+}
+
+h3,
+.heading-3 {
+  font-size: 20px;
+}
+
+h4,
+.heading-4 {
+  font-size: 18px;
+}
+
+.link {
+  color: $primary-1;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    border-bottom-color: currentColor;
+  }
+}
+
+.formated-content {
+  color: $neutral-2;
+  p,
+  ul,
+  ol,
+  blockquote {
+    margin: 0 0 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin: 32px 0 1rem;
+    color: $neutral-1;
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  p,
+  blockquote,
+  li {
+    line-height: 1.7;
+  }
+  blockquote {
+    padding-left: 1rem;
+    border-left: 2px solid $primary-1;
+  }
+  ul {
+    padding: 0;
+    list-style-type: none;
+    li {
+      position: relative;
+      margin-bottom: 0.5rem;
+      padding-left: 1em;
+      &:before {
+        position: absolute;
+        top: 0.5em;
+        left: 0;
+        width: 8px;
+        height: 8px;
+        background-color: $primary-1;
+        border-radius: 2px;
+        content: '';
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

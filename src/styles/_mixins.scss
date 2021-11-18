@@ -1,0 +1,62 @@
+@function rem($pixels, $context: $font-size-base) {
+  @return #{$pixels/$context}rem;
+}
+
+@mixin max-screen($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}
+@mixin min-screen($size) {
+  @media (min-width: $size + 1px) {
+    @content;
+  }
+}
+
+@mixin large() {
+  @include max-screen($large-size) {
+    @content;
+  }
+}
+
+@mixin medium() {
+  @include max-screen($medium-size) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @include max-screen($small-size) {
+    @content;
+  }
+}
+
+@mixin phone() {
+  @include max-screen($smallest-size) {
+    @content;
+  }
+}
+
+@mixin large-mf() {
+  @include min-screen($large-size) {
+    @content;
+  }
+}
+
+@mixin medium-mf() {
+  @include min-screen($medium-size) {
+    @content;
+  }
+}
+
+@mixin tablet-mf() {
+  @include min-screen($small-size) {
+    @content;
+  }
+}
+
+@mixin phone-mf() {
+  @include min-screen($smallest-size) {
+    @content;
+  }
+}
