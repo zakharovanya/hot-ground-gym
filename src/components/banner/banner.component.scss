@@ -6,6 +6,7 @@
   @include phone {
     background-image: url('images/bg-banner-m.svg');
     background-position: right;
+    background-size: cover;
     overflow: hidden;
   }
 }

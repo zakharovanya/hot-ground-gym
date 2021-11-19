@@ -135,7 +135,7 @@ img {
 }
 
 .hide_on_mobile { 
-  @include max-screen(380px) { display: none; }
+  @include max-screen(420px) { display: none; }
 }
 
 .hide_on_small_mobile { 
@@ -143,7 +143,7 @@ img {
 }
 
 .show_on_mobile_only { 
-  @include min-screen(380px) { display: none; }
+  @include min-screen(420px) { display: none; }
 }
 
 .show_on_small_mobile_only { 

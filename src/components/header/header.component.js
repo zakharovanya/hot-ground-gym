@@ -7,14 +7,15 @@ const rootBlock = document.querySelector('.root');
 let lastScrollTop = 0;
 
 window.onload = () => {
-  modileMenu.classList.add('mobile-menu-hide');
   addressInHeader.classList.toggle('address-show');
   rootBlock.classList.toggle('root-hide-menu');
+  modileMenu.classList.add('m-t-104-mobile');
 };
 
 window.addEventListener('scroll', () => {
   const st = window.pageYOffset || document.documentElement.scrollTop;
   if (st > lastScrollTop) {
+    modileMenu.classList.remove('m-t-104-mobile');
     addressInHeader.classList.remove('address-show');
     addressInHeader.classList.add('address-hide');
     modileMenu.classList.remove('m-t-104-mobile');
