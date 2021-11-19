@@ -26,6 +26,7 @@ body {
 .root {
   flex-grow: 1;
   width: 100%;
+  margin-top: 121px;
   @include phone {
     margin-top: 104px;
   }

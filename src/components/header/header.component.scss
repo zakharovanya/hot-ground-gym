@@ -11,12 +11,10 @@
 }
 
 .fixed-header {
-  @include phone {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-  }
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
   .menu-list {
     @include phone {
       top: 59px;
@@ -54,16 +52,12 @@
   }
 }
 
-.mobile-address-hide {
-  @include phone {
-    display: none;
-  }
+.address-hide {
+  display: none;
 }
 
-.mobile-address-show {
-  @include phone {
-    display: block;
-  }
+.address-show {
+  display: block;
 }
 
 .address-item {
